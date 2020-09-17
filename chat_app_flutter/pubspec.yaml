@@ -21,8 +21,10 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  json_serializable: ^3.4.1
   redux: ^4.0.0+3
   flutter_redux: ^0.6.0
+  flutter_slidable: ^0.5.7
 
   flutter:
     sdk: flutter
@@ -48,8 +50,15 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/logo/logo.png
-  #   - images/a_dot_ham.jpeg
+    - assets/images/chat/chicken.png
+    - assets/images/chat/chickenhead.png
+    - assets/images/chat/dog.png
+    - assets/images/chat/dogsmile.png
+    - assets/images/chat/trooler.png
 
+    # languges
+    - assets/languages/en/login_screen.json
+    - assets/languages/vn/login_screen.json
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -1,5 +1,9 @@
-import 'package:chat_app_flutter/screens/login_screen.dart';
+import 'dart:convert';
+
+import 'package:chat_app_flutter/assets/Languges/login_lang.dart';
+import 'package:chat_app_flutter/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -13,9 +17,19 @@ int counterReducer(int state, dynamic action) {
 }
 
 void main() {
-  runApp(LoginScreen());
+  runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: LoginScreen(),
+    );
+  }
+}
+
+/*
 class MyApp extends StatelessWidget {
   final store = Store<int>(counterReducer, initialState: 0);
 
@@ -65,3 +79,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+*/

@@ -1,0 +1,46 @@
+{
+  "logoURL": "assets/images/logo/logo.png",
+  "titleHint": "Vui lòng nhập ",
+  "email": {
+    "title": "Địa chỉ email",
+    "color": "0xFF000000",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "password": {
+    "title": "Mật khẩu",
+    "color": "0xFF000000",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "forgotPass": {
+    "title": "Quên mật khẩu?",
+    "color": "0xFF29B6F6",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "color": "0xFFE1F5FE",
+    "fontFamily": "",
+    "fontSize": "18",
+    "fontWeight": ""
+  },
+  "noAccount": {
+    "title": "Không có tài khoản? ",
+    "color": "0x42000000",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "signUp": {
+    "title": "Đăng ký",
+    "color": "0xFF81D4FA",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  }
+}

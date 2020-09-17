@@ -1,0 +1,144 @@
+import 'package:flutter/material.dart';
+
+class ChatScreen extends StatelessWidget {
+  final List<String> entries = <String>[
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'phan van hung',
+    'dfgdsfg',
+    'aaaa',
+    'bbb',
+  ];
+  final List<int> colorCodes = <int>[
+    600,
+    500,
+    100,
+    600,
+    500,
+    100,
+    600,
+    500,
+    100,
+    600,
+    500,
+    100,
+    600,
+    500,
+    100,
+    500,
+    100,
+    600,
+    500,
+    100,
+    500,
+    100,
+    600,
+    500,
+    100,
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("hung"),
+      ),
+      body: Container(
+        color: Colors.red,
+        child: ListView.builder(
+            padding: const EdgeInsets.all(8),
+            itemCount: entries.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                color: Colors.black,
+                //height: 55,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        color: Colors.grey,
+                        //height: 60,
+                        child: Center(
+                          child: Icon(
+                            Icons.access_alarm,
+                            // color: Colors.grey,
+                            size: 60,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: Container(
+                        color: Colors.blue,
+                        height: 60,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Name ${entries[index]}"),
+                                Text(
+                                  "21/06/1993",
+                                  textAlign: TextAlign.right,
+                                ),
+                              ],
+                            ),
+                            Expanded(
+                              child: Text(
+                                "Do some thing",
+                                maxLines: 1,
+                              ),
+                            ),
+                            Expanded(
+                              child: Align(
+                                alignment: FractionalOffset.bottomCenter,
+                                child: Divider(
+                                  color: Colors.black,
+                                  height: 10.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+              // child: Center(child: Text('Entry ${entries[index]}')),
+            }),
+      ),
+    );
+  }
+}
+/*
+ListView(
+          children: [
+            ListTile(
+              leading: Icon(Icons.ac_unit),
+              title: Text("phan van hung"),
+              subtitle: Text("#54"),
+              // isThreeLine: true,
+              dense: true,
+              tileColor: Colors.red,
+            ),
+          ],
+        ),
+ */

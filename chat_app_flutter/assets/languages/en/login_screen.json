@@ -1,0 +1,46 @@
+{
+  "logoURL": "assets/images/logo/logo.png",
+  "titleHint": "Please input ",
+  "email": {
+    "title": "Email",
+    "color": "0xFF000000",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "password": {
+    "title": "Password",
+    "color": "0xFF000000",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "forgotPass": {
+    "title": "Forgot password?",
+    "color": "0xFF29B6F6",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "login": {
+    "title": "Login",
+    "color": "0xFFE1F5FE",
+    "fontFamily": "",
+    "fontSize": "18",
+    "fontWeight": ""
+  },
+  "noAccount": {
+    "title": "Don't have an account? ",
+    "color": "0x42000000",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  },
+  "signUp": {
+    "title": "Sign Up",
+    "color": "0xFF81D4FA",
+    "fontFamily": "",
+    "fontSize": "14",
+    "fontWeight": ""
+  }
+}

@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
 
 class TextInputBase extends StatefulWidget {
-  final String _labelName;
-
-  TextInputBase(this._labelName);
+  TextInputBase(this._labelName, this._labelNameHint, this._color,
+      this._fontFamily, this._fontSize, this._fontWeight);
 
   @override
-  State<TextInputBase> createState() => _TextInputBaseState(this._labelName);
+  State<TextInputBase> createState() => _TextInputBaseState(
+      this._labelName,
+      this._labelNameHint,
+      this._color,
+      this._fontFamily,
+      this._fontSize,
+      this._fontWeight);
+  final String _labelName;
+  final String _labelNameHint;
+  final String _color;
+  final String _fontFamily;
+  final String _fontSize;
+  final String _fontWeight;
 }
 
 class _TextInputBaseState extends State<TextInputBase> {
-  final String _labelName;
-  bool _showClearButton = false;
-  TextEditingController _controller;
-
-  _TextInputBaseState(this._labelName) {
+  ///
+  _TextInputBaseState(this._labelName, this._labelNameHint, this._color,
+      this._fontFamily, this._fontSize, this._fontWeight) {
     this._controller = TextEditingController();
   }
 
@@ -32,10 +41,12 @@ class _TextInputBaseState extends State<TextInputBase> {
                 this._showClearButton = false;
               });
       },
-      //
+
+      ///
       decoration: InputDecoration(
-        labelText: _labelName,
-        labelStyle: TextStyle(color: Colors.black, fontSize: 14),
+        labelText: this._labelName,
+        labelStyle:
+            TextStyle(color: Color(int.parse(this._color)), fontSize: 14),
         filled: true,
         suffixIcon: this._showClearButton == true
             ? IconButton(
@@ -48,12 +59,14 @@ class _TextInputBaseState extends State<TextInputBase> {
                 icon: Icon(Icons.clear),
               )
             : null,
-        // When press on text form filed
+
+        /// When press on text form filed
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(color: Colors.black54, width: 0.5),
         ),
-        // When not press on text form filed
+
+        /// When not press on text form filed
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
@@ -62,13 +75,23 @@ class _TextInputBaseState extends State<TextInputBase> {
           ),
         ),
       ),
-      //
+
+      /// Validation when user can't input
       validator: (value) {
         if (value.isEmpty) {
-          return "Please input your " + _labelName;
+          return _labelNameHint + _labelName;
         }
         return null;
       },
     );
   }
+
+  final String _labelName;
+  final String _labelNameHint;
+  final String _color;
+  final String _fontFamily;
+  final String _fontSize;
+  final String _fontWeight;
+  bool _showClearButton = false;
+  TextEditingController _controller;
 }
