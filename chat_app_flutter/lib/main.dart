@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:chat_app_flutter/assets/Languges/login_lang.dart';
+import 'package:chat_app_flutter/screens/bases/loading_base.dart';
 import 'package:chat_app_flutter/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
